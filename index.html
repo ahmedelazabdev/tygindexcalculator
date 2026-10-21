@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- High-CTR SEO Meta -->
+  <title>TyG Index Calculator ⚡ Triglyceride-Glucose Insulin Resistance Tool (100% Free)</title>
+  <meta name="description" content="Calculate your Triglyceride-Glucose (TyG) Index to evaluate insulin resistance, metabolic syndrome, and cardiovascular disease risk. Supports mg/dL and mmol/L with TyG-BMI and TyG-WC.">
+  <meta name="keywords" content="tyg index calculator, triglyceride glucose index, insulin resistance calculator, calculate tyg index online, tyg bmi calculator, tyg cut off values, homa-ir alternative, metabolic syndrome calculator">
+  <meta name="author" content="Ahmed Elazab">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- Absolute Canonical URL -->
+  <link rel="canonical" href="https://ahmedelazabdev.github.io/tygindexcalculator/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahmedelazabdev.github.io/tygindexcalculator/">
+  <meta property="og:title" content="TyG Index Calculator ⚡ Triglyceride-Glucose Insulin Resistance Tool">
+  <meta property="og:description" content="Evaluate insulin sensitivity, NAFLD/MASLD risk, and arterial health with the clinical Triglyceride-Glucose (TyG) Index. Free, private, and instant.">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TyG Index Calculator ⚡ Free Online Insulin Resistance Tool">
+  <meta name="twitter:description" content="Calculate your TyG Index score using fasting glucose and triglycerides. Clinical cutoffs and lifestyle guidance included.">
+
+  <!-- Structured Data: WebApplication, HowTo & FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "TyG Index Calculator - Triglyceride-Glucose Evaluator",
+        "url": "https://ahmedelazabdev.github.io/tygindexcalculator/",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "description": "A clinical health diagnostic calculator that computes the Triglyceride-Glucose (TyG) Index, TyG-BMI, and TyG-Waist Circumference to assess insulin resistance, metabolic syndrome, and cardiovascular risk.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "HowTo",
+        "name": "How to Calculate Your TyG Index for Insulin Resistance",
+        "description": "Step-by-step instructions to input fasting lab biomarkers and interpret your calculated TyG Index risk score.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Input Fasting Triglycerides",
+            "text": "Enter your serum fasting triglyceride level from your standard lipid blood test and select your laboratory unit (mg/dL or mmol/L)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Input Fasting Blood Glucose",
+            "text": "Enter your fasting plasma glucose level from your metabolic panel and select your measurement unit (mg/dL or mmol/L)."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add Anthropometrics (Optional)",
+            "text": "Provide optional Body Mass Index (BMI) or waist circumference to compute advanced surrogate markers like TyG-BMI and TyG-WC."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Review Clinical Interpretation",
+            "text": "Evaluate your score against validated clinical cutoffs: below 8.0 indicates high insulin sensitivity, while scores 8.5 and above suggest significant insulin resistance."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the TyG Index and what does it measure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Triglyceride-Glucose (TyG) Index is an evidence-based clinical surrogate marker used to evaluate insulin resistance. Calculated from routine fasting blood glucose and triglyceride panels, it demonstrates high diagnostic concordance with the hyperinsulinemic-euglycemic clamp (the medical gold standard) without requiring expensive fasting insulin tests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is considered a normal TyG Index score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A TyG Index below 8.0 is generally considered optimal, representing healthy insulin sensitivity. Values between 8.0 and 8.49 indicate borderline or moderate risk, whereas a score of 8.50 or higher strongly correlates with systemic insulin resistance, metabolic syndrome, non-alcoholic fatty liver disease (MASLD), and increased cardiovascular disease risk."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is TyG Index often preferred over HOMA-IR?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HOMA-IR requires measuring fasting serum insulin, an expensive test with high inter-laboratory variability and poor global standardization. In contrast, triglycerides and fasting glucose are universally measured in standard, low-cost lipid and metabolic panels across virtually every medical clinic worldwide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my health biomarkers or medical results stored on any server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No! All mathematical conversions and clinical score calculations run 100% locally in your browser memory using client-side JavaScript. No blood values, health numbers, or personal metrics are ever transmitted or saved to external servers."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --primary-soft: #eff6ff;
+      --accent: #047857;
+      --accent-soft: #d1fae5;
+      --accent-text: #064e3b;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #cbd5e1;
+      --text: #0f172a;
+      --text-muted: #334155;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
+      --shadow-xl: 0 10px 25px -5px rgba(0,0,0,0.08);
+      --radius: 14px;
+      /* Zero-CLS Native System Font Stack */
+      --font-stack: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      text-rendering: optimizeSpeed;
+    }
+
+    /* Fixed 64px Header */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+      height: 64px;
+      overflow: hidden;
+    }
+
+    .nav-inner {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .brand-badge {
+      background: #047857;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      font-weight: 800;
+    }
+
+    .status-tag {
+      background: var(--accent-soft);
+      color: var(--accent-text);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: 1px solid #a7f3d0;
+    }
+
+    main {
+      max-width: 1050px;
+      width: 100%;
+      margin: 24px auto 40px;
+      padding: 0 16px;
+      flex: 1;
+      contain: layout style;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Main Calculator Card */
+    .calc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-xl);
+      overflow: hidden;
+      margin-bottom: 36px;
+    }
+
+    .card-topbar {
+      background: #f1f5f9;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .topbar-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn-topbar {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      transition: all 0.15s ease;
+    }
+
+    .btn-topbar:hover {
+      background: #e2e8f0;
+    }
+
+    .btn-primary-action {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
+    }
+
+    .btn-primary-action:hover {
+      background: var(--primary-hover);
+    }
+
+    /* Dual Workspace Grid */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+    }
+
+    @media (max-width: 820px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left Input Controls */
+    .inputs-pane {
+      padding: 24px;
+      border-right: 1px solid var(--border);
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    @media (max-width: 820px) {
+      .inputs-pane {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .field-hint {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .input-unit-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .num-input {
+      flex: 1;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0 12px;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .num-input:focus {
+      border-color: var(--primary);
+    }
+
+    select.unit-select {
+      width: 110px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0 8px;
+      background: #f8fafc;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text);
+      outline: none;
+      cursor: pointer;
+    }
+
+    select.unit-select:focus {
+      border-color: var(--primary);
+    }
+
+    /* Optional Anthropometric Parameters Box */
+    .optional-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .optional-title {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .optional-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .optional-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Right Live Results Summary */
+    .summary-pane {
+      padding: 24px;
+      background: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .score-card {
+      background: var(--surface);
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .score-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .score-val {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--primary);
+      font-family: var(--font-mono);
+      line-height: 1.1;
+    }
+
+    .risk-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      width: fit-content;
+      margin-top: 4px;
+    }
+
+    .risk-optimal { background: #d1fae5; color: #064e3b; border: 1px solid #a7f3d0; }
+    .risk-moderate { background: #fef3c7; color: #78350f; border: 1px solid #fde68a; }
+    .risk-elevated { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+
+    /* Related Derived Indices Grid */
+    .derived-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .derived-subcard {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .derived-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .derived-val {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .clinical-note-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Semantic 3-Step Instruction Bar */
+    .action-steps-bar {
+      padding: 16px 20px;
+      background: #f8fafc;
+      border-top: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .action-steps-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .action-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-soft);
+      color: #1e40af;
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .step-title {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .step-text p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Long-Form Knowledge Base */
+    .article-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 40px;
+      content-visibility: auto;
+      contain-intrinsic-size: 1000px 1800px;
+    }
+
+    @media (max-width: 600px) {
+      .article-container {
+        padding: 24px 18px;
+      }
+    }
+
+    .article-container h2 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 36px 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      position: relative;
+    }
+
+    .article-container h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .article-container h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .article-container h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 24px 0 12px;
+      color: #1e293b;
+    }
+
+    .article-container p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+
+    .article-container ul, .article-container ol {
+      margin: 0 0 24px 24px;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+    }
+
+    .article-container li {
+      margin-bottom: 10px;
+    }
+
+    .highlight-card {
+      background: var(--primary-soft);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 10px 10px 0;
+      margin: 24px 0;
+      color: #1e3a8a;
+      font-size: 1rem;
+    }
+
+    /* Comparison Table in Article */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    table.content-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    table.content-table thead {
+      background: #f1f5f9;
+    }
+
+    table.content-table th, table.content-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    table.content-table th {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    table.content-table tbody tr:hover {
+      background-color: #f8fafc;
+    }
+
+    /* FAQ Accordion */
+    .faq-block {
+      margin-top: 24px;
+    }
+
+    .faq-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 12px;
+      background: #f8fafc;
+    }
+
+    .faq-header {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 1.02rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      user-select: none;
+      color: var(--text);
+    }
+
+    .faq-header:hover {
+      color: var(--primary);
+    }
+
+    .faq-body {
+      padding: 0 20px 16px;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      display: none;
+      line-height: 1.7;
+    }
+
+    .faq-card.open {
+      background: var(--surface);
+      border-color: var(--primary);
+    }
+
+    .faq-card.open .faq-body {
+      display: block;
+    }
+
+    .faq-toggle {
+      font-size: 1.3rem;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .faq-card.open .faq-toggle {
+      transform: rotate(45deg);
+    }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: #0f172a;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 9999px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-xl);
+      transition: transform 0.25s ease;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    #toast.active {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 28px 16px;
+      margin-top: auto;
+    }
+
+    .footer-wrap {
+      max-width: 1050px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .footer-nav a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+    }
+
+    .footer-nav a:hover {
+      color: var(--primary);
+    }
+
+    /* Clean Print Stylesheet for Medical Records */
+    @media print {
+      header, .hero, .card-topbar, .topbar-actions, .action-steps-bar, .article-container, footer, #toast {
+        display: none !important;
+      }
+      body {
+        background: #ffffff;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+      .calc-card, .calc-grid, .inputs-pane, .summary-pane {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        background: #ffffff;
+      }
+      .score-card {
+        border: 2px solid #000000;
+      }
+      .score-val {
+        color: #000000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-inner">
+      <a href="https://ahmedelazabdev.github.io/tygindexcalculator/" class="brand">
+        <span class="brand-badge">🩺</span>
+        <span>TyG Index Calculator</span>
+      </a>
+      <span class="status-tag">Clinical Insulin Resistance Tool</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>TyG Index Calculator ⚡ <span>Triglyceride-Glucose Marker</span></h1>
+      <p>Calculate your Triglyceride-Glucose (TyG) Index to evaluate insulin sensitivity, metabolic syndrome status, and cardiovascular risk. Supports clinical unit conversions (mg/dL and mmol/L) with TyG-BMI and TyG-WC.</p>
+    </section>
+
+    <!-- Main Calculator Card -->
+    <section class="calc-card" id="calculator-app">
+      <div class="card-topbar">
+        <span class="topbar-title">Fasting Biomarkers &amp; Anthropometrics</span>
+        <div class="topbar-actions">
+          <button class="btn-topbar" onclick="loadSampleNormal()">
+            <span>✨ Normal Sample</span>
+          </button>
+          <button class="btn-topbar" onclick="loadSampleHighRisk()">
+            <span>⚠️ High Risk Sample</span>
+          </button>
+          <button class="btn-topbar btn-primary-action" onclick="copyResultsSummary()">
+            <span>📋 Copy Report</span>
+          </button>
+          <button class="btn-topbar" onclick="window.print()">
+            <span>🖨️ Print</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Dual Workspace Grid -->
+      <div class="calc-grid">
+        <!-- Left: Input Controls -->
+        <div class="inputs-pane">
+          <!-- Fasting Triglycerides -->
+          <div class="form-group">
+            <div class="form-label">
+              <label for="inp-tg">Fasting Triglycerides (TG):</label>
+              <span class="field-hint">Serum lipid panel</span>
+            </div>
+            <div class="input-unit-group">
+              <input type="number" id="inp-tg" class="num-input" value="120" step="any" min="1" oninput="calculateTyG()" aria-label="Fasting Triglycerides">
+              <select id="sel-tg-unit" class="unit-select" onchange="calculateTyG()" aria-label="Triglycerides Unit">
+                <option value="mg/dL" selected>mg/dL</option>
+                <option value="mmol/L">mmol/L</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Fasting Blood Glucose -->
+          <div class="form-group">
+            <div class="form-label">
+              <label for="inp-fbg">Fasting Blood Glucose (FBG):</label>
+              <span class="field-hint">Plasma glucose</span>
+            </div>
+            <div class="input-unit-group">
+              <input type="number" id="inp-fbg" class="num-input" value="90" step="any" min="1" oninput="calculateTyG()" aria-label="Fasting Blood Glucose">
+              <select id="sel-fbg-unit" class="unit-select" onchange="calculateTyG()" aria-label="Glucose Unit">
+                <option value="mg/dL" selected>mg/dL</option>
+                <option value="mmol/L">mmol/L</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Optional Anthropometrics -->
+          <div class="optional-box">
+            <span class="optional-title">Optional: Anthropometric Indices</span>
+            <div class="optional-grid">
+              <div class="form-group">
+                <label class="form-label" for="inp-bmi" style="font-size:0.78rem;">BMI (kg/m²):</label>
+                <input type="number" id="inp-bmi" class="num-input" value="24.2" step="0.1" min="10" max="60" oninput="calculateTyG()" placeholder="e.g. 24.5" aria-label="Body Mass Index">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="inp-wc" style="font-size:0.78rem;">Waist (cm):</label>
+                <input type="number" id="inp-wc" class="num-input" value="82" step="0.5" min="30" max="200" oninput="calculateTyG()" placeholder="e.g. 85" aria-label="Waist Circumference in cm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Real-Time Results Summary (Preloaded for Zero CLS) -->
+        <div class="summary-pane">
+          <!-- Main Score Card -->
+          <div class="score-card">
+            <span class="score-title">Triglyceride-Glucose (TyG) Index</span>
+            <div class="score-val" id="disp-tyg-score">8.59</div>
+            <div class="risk-badge risk-elevated" id="disp-risk-badge">High Risk / Significant Insulin Resistance</div>
+          </div>
+
+          <!-- Derived Metrics Grid -->
+          <div class="derived-grid">
+            <div class="derived-subcard">
+              <span class="derived-label">TyG-BMI Index</span>
+              <span class="derived-val" id="disp-tyg-bmi">207.88</span>
+            </div>
+            <div class="derived-subcard">
+              <span class="derived-label">TyG-WC (Waist)</span>
+              <span class="derived-val" id="disp-tyg-wc">704.38</span>
+            </div>
+          </div>
+
+          <!-- Clinical Evaluation Note -->
+          <div class="clinical-note-box" id="disp-clinical-note">
+            Your TyG score of <strong>8.59</strong> is above the 8.50 cutoff, indicating elevated peripheral insulin resistance. Discuss metabolic health, lipid optimization, and fasting glucose management with your physician.
+          </div>
+        </div>
+      </div>
+
+      <!-- Semantic 3-Step Instruction Bar (No h4 skips) -->
+      <div class="action-steps-bar">
+        <div class="action-step">
+          <span class="step-num">1</span>
+          <div class="step-text">
+            <strong class="step-title">Enter Fasting Biomarkers</strong>
+            <p>Input your fasting triglycerides and fasting plasma glucose levels directly from your routine lab report.</p>
+          </div>
+        </div>
+        <div class="action-step">
+          <span class="step-num">2</span>
+          <div class="step-text">
+            <strong class="step-title">Select Laboratory Units</strong>
+            <p>Easily toggle between standard US units (mg/dL) and international metric standard units (mmol/L).</p>
+          </div>
+        </div>
+        <div class="action-step">
+          <span class="step-num">3</span>
+          <div class="step-text">
+            <strong class="step-title">Assess Metabolic Risk</strong>
+            <p>Evaluate your score against validated clinical cutoffs for insulin resistance, NAFLD, and arterial health.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comprehensive Medical Knowledge Base & Clinical Guide -->
+    <article class="article-container">
+      <h2>What is the TyG Index? The Science of the Triglyceride-Glucose Marker</h2>
+      <p>
+        The <strong>Triglyceride-Glucose (TyG) Index</strong> is an evidence-based clinical biomarker developed to evaluate <strong>insulin resistance (IR)</strong> and cardiometabolic risk. First introduced in landmark endocrinology research by Dr. L.E. Simental-Mendía and colleagues in 2008, the TyG index leverages standard routine blood panels to measure how effectively your cells respond to insulin.
+      </p>
+
+      <div class="highlight-card">
+        <strong>💡 The Clinical Breakthrough:</strong> The medical gold standard for measuring insulin resistance is the <em>hyperinsulinemic-euglycemic clamp</em>. However, the clamp is highly invasive, expensive, and impractical for regular checkups. Extensive clinical studies have demonstrated that the TyG Index correlates with the clamp just as reliably as (and in many cardiovascular endpoints, outperforms) fasting insulin-based calculations like <strong>HOMA-IR</strong>.
+      </div>
+
+      <h2>The Mathematical Formula &amp; Unit Conversion Principles</h2>
+      <p>
+        The standardized scientific formula for calculating the TyG Index is based on the natural logarithm ($\ln$) of the product of fasting triglycerides and fasting glucose divided by two:
+      </p>
+      <div class="highlight-card" style="font-family:var(--font-mono); font-size:1.05rem; word-break:break-all;">
+        TyG Index = ln[ ( Fasting Triglycerides (mg/dL) × Fasting Glucose (mg/dL) ) / 2 ]
+      </div>
+
+      <h3>Converting International Laboratory Units (mmol/L to mg/dL)</h3>
+      <p>
+        Because the TyG index formula requires inputs expressed in milligrams per deciliter (<code>mg/dL</code>), our calculator automatically converts international Système International (<code>mmol/L</code>) units behind the scenes using strict biochemical molecular weights:
+      </p>
+      <ul>
+        <li><strong>Triglycerides:</strong> $1\text{ mmol/L} = 88.57\text{ mg/dL}$ (derived from average triacylglycerol molecular mass ~885.7 g/mol).</li>
+        <li><strong>Glucose:</strong> $1\text{ mmol/L} = 18.0182\text{ mg/dL}$ (derived from D-glucose molecular mass 180.16 g/mol).</li>
+      </ul>
+
+      <h2>Clinical Interpretation &amp; Risk Cutoff Thresholds</h2>
+      <p>
+        Across large-scale epidemiological cohorts (including NHANES, the Framingham Offspring Study, and the UK Biobank), specific TyG thresholds identify varying tiers of metabolic dysfunction:
+      </p>
+      <div class="table-wrap">
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>TyG Index Range</th>
+              <th>Insulin Sensitivity Status</th>
+              <th>Cardiometabolic Risk Profile</th>
+              <th>Clinical Recommendations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Below 8.00</strong></td>
+              <td>Optimal Insulin Sensitivity</td>
+              <td>Low Risk for Metabolic Syndrome &amp; Atherosclerosis</td>
+              <td>Maintain healthy diet, lean body mass, and aerobic exercise.</td>
+            </tr>
+            <tr>
+              <td><strong>8.00 – 8.49</strong></td>
+              <td>Borderline / Mild Insulin Resistance</td>
+              <td>Moderate Risk; Early signs of metabolic strain</td>
+              <td>Reduce ultra-processed carbs, increase zone 2 cardio &amp; fiber.</td>
+            </tr>
+            <tr>
+              <td><strong>8.50 and Above</strong></td>
+              <td>Significant Insulin Resistance</td>
+              <td>High Risk for Type 2 Diabetes, NAFLD/MASLD &amp; CVD</td>
+              <td>Comprehensive medical consultation; formal lipid and HbA1c review.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Why TyG Index is Clinically Superior to HOMA-IR</h2>
+      <p>
+        While HOMA-IR (Homeostatic Model Assessment of Insulin Resistance) remains widely cited, it has substantial limitations in real-world clinical care:
+      </p>
+      <ol>
+        <li><strong>Fasting Insulin Variability:</strong> Serum insulin fluctuates erratically in pulsatile bursts with a short half-life (~4–6 minutes). A patient's measured insulin can vary significantly between morning draws.</li>
+        <li><strong>Lack of Global Standardization:</strong> Insulin immunoassay kits differ widely between medical labs, making universal diagnostic cutoffs for HOMA-IR inconsistent.</li>
+        <li><strong>High Economic Cost:</strong> Fasting insulin is rarely covered by routine preventive insurance. Conversely, triglycerides and fasting glucose are universally included in baseline lipid panels costing a fraction of the price.</li>
+      </ol>
+
+      <h2>Health Conditions Correlated with an Elevated TyG Index</h2>
+      <ul>
+        <li><strong>Metabolic Dysfunction-Associated Steatotic Liver Disease (MASLD / NAFLD):</strong> Because hepatic insulin resistance drives uninhibited de novo lipogenesis, the liver accumulates fat droplets. The TyG index exhibits area-under-the-curve (AUC) diagnostic accuracy exceeding 85% for detecting fatty liver.</li>
+        <li><strong>Cardiovascular Disease &amp; Coronary Calcification:</strong> High TyG values strongly correlate with arterial stiffness, endothelial dysfunction, elevated high-sensitivity C-reactive protein (hs-CRP), and coronary artery calcium (CAC) progression.</li>
+        <li><strong>Type 2 Diabetes Mellitus:</strong> Longitudinal studies show patients in the highest TyG quartile face a 3- to 4-fold increased incidence of developing clinical diabetes over a 10-year follow-up compared to those in the lowest quartile.</li>
+      </ul>
+
+      <h2>Evidence-Based Strategies to Lower Your TyG Index</h2>
+      <ol>
+        <li><strong>Eliminate Refined Sugars &amp; High-Fructose Corn Syrup:</strong> Dietary fructose is metabolized exclusively by the liver, directly stimulating triglyceride synthesis and driving hepatic insulin resistance.</li>
+        <li><strong>Engage in Resistance Training:</strong> Skeletal muscle disposes of over 75% of postprandial glucose. Increasing muscle cross-sectional area provides a massive metabolic "sink" for circulating blood sugar.</li>
+        <li><strong>Incorporate Omega-3 Fatty Acids:</strong> High-purity EPA and DHA supplementation (or consuming fatty cold-water fish like salmon, sardines, and mackerel) downregulates hepatic VLDL assembly, lowering fasting triglycerides by 20% to 35%.</li>
+      </ol>
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <div class="faq-block">
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaqCard(this)">
+            <span>Do I need to fast before taking the blood test?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-body">
+            Yes, strictly. The TyG index requires a true <strong>10 to 12 hour overnight fast</strong> (water only). Eating before the test causes temporary postprandial spikes in both triglycerides and blood glucose, which will falsely inflate your calculated index score.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaqCard(this)">
+            <span>What are TyG-BMI and TyG-WC?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-body">
+            TyG-BMI is calculated as <code>TyG × BMI</code>, and TyG-WC is <code>TyG × Waist Circumference (cm)</code>. These derived anthropometric markers combine biochemical insulin resistance with visceral obesity, offering enhanced diagnostic sensitivity for identifying non-alcoholic fatty liver disease (MASLD).
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaqCard(this)">
+            <span>Can taking statins or fibrates alter my TyG score?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-body">
+            Yes. Lipid-lowering medications (especially fibrates like fenofibrate, or prescription omega-3 ethyl esters) directly lower serum triglycerides, which will reduce your calculated TyG index. Inform your healthcare provider if you are taking lipid-modifying pharmaceuticals.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <div class="faq-header" onclick="toggleFaqCard(this)">
+            <span>Does this tool provide medical diagnoses?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-body">
+            No. This calculator is an educational, research, and self-monitoring utility. It is not a substitute for formal clinical diagnosis or personalized medical advice. Always discuss laboratory biomarker findings with a qualified physician or endocrinologist.
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast">Ready!</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-wrap">
+      <p>© <span id="current-year"></span> All rights reserved — TyG Index Calculator &amp; Clinical Health Utility.</p>
+      <div class="footer-nav">
+        <a href="#calculator-app">TyG Calculator</a>
+        <a href="https://1io-site.blogspot.com" target="_blank" rel="noopener">By: 1io.site</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Instant Clinical TyG Calculation Engine -->
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    const inpTg = document.getElementById('inp-tg');
+    const selTgUnit = document.getElementById('sel-tg-unit');
+    const inpFbg = document.getElementById('inp-fbg');
+    const selFbgUnit = document.getElementById('sel-fbg-unit');
+    const inpBmi = document.getElementById('inp-bmi');
+    const inpWc = document.getElementById('inp-wc');
+
+    const dispTygScore = document.getElementById('disp-tyg-score');
+    const dispRiskBadge = document.getElementById('disp-risk-badge');
+    const dispTygBmi = document.getElementById('disp-tyg-bmi');
+    const dispTygWc = document.getElementById('disp-tyg-wc');
+    const dispClinicalNote = document.getElementById('disp-clinical-note');
+
+    function calculateTyG() {
+      const tgRaw = parseFloat(inpTg.value);
+      const fbgRaw = parseFloat(inpFbg.value);
+
+      if (isNaN(tgRaw) || isNaN(fbgRaw) || tgRaw <= 0 || fbgRaw <= 0) {
+        dispTygScore.textContent = '--';
+        dispRiskBadge.className = 'risk-badge risk-moderate';
+        dispRiskBadge.textContent = 'Awaiting valid lab values';
+        dispTygBmi.textContent = '--';
+        dispTygWc.textContent = '--';
+        dispClinicalNote.innerHTML = 'Please enter valid positive numbers for both fasting triglycerides and blood glucose.';
+        return;
+      }
+
+      // Convert to standard mg/dL
+      let tgMg = tgRaw;
+      if (selTgUnit.value === 'mmol/L') {
+        tgMg = tgRaw * 88.57; // 1 mmol/L TG ≈ 88.57 mg/dL
+      }
+
+      let fbgMg = fbgRaw;
+      if (selFbgUnit.value === 'mmol/L') {
+        fbgMg = fbgRaw * 18.0182; // 1 mmol/L Glucose ≈ 18.0182 mg/dL
+      }
+
+      // Formula: ln[ (TG * FBG) / 2 ]
+      const product = (tgMg * fbgMg) / 2;
+      const tygIndex = Math.log(product);
+      const tygFormatted = tygIndex.toFixed(2);
+
+      dispTygScore.textContent = tygFormatted;
+
+      // Risk Stratification
+      if (tygIndex < 8.00) {
+        dispRiskBadge.className = 'risk-badge risk-optimal';
+        dispRiskBadge.textContent = 'Optimal / High Insulin Sensitivity';
+        dispClinicalNote.innerHTML = `Your TyG score of <strong>${tygFormatted}</strong> is within the optimal range (&lt; 8.00). This indicates healthy insulin sensitivity and low statistical risk for metabolic syndrome.`;
+      } else if (tygIndex < 8.50) {
+        dispRiskBadge.className = 'risk-badge risk-moderate';
+        dispRiskBadge.textContent = 'Borderline / Moderate Risk';
+        dispClinicalNote.innerHTML = `Your TyG score of <strong>${tygFormatted}</strong> falls in the borderline zone (8.00 – 8.49). Early compensatory insulin resistance may be developing. Focus on whole-food nutrition and physical activity.`;
+      } else {
+        dispRiskBadge.className = 'risk-badge risk-elevated';
+        dispRiskBadge.textContent = 'High Risk / Significant Insulin Resistance';
+        dispClinicalNote.innerHTML = `Your TyG score of <strong>${tygFormatted}</strong> is above the 8.50 cutoff, indicating elevated peripheral insulin resistance. Discuss metabolic health, lipid optimization, and fasting glucose management with your physician.`;
+      }
+
+      // Derived Metrics: TyG-BMI & TyG-WC
+      const bmiVal = parseFloat(inpBmi.value);
+      if (!isNaN(bmiVal) && bmiVal > 0) {
+        dispTygBmi.textContent = (tygIndex * bmiVal).toFixed(2);
+      } else {
+        dispTygBmi.textContent = '--';
+      }
+
+      const wcVal = parseFloat(inpWc.value);
+      if (!isNaN(wcVal) && wcVal > 0) {
+        dispTygWc.textContent = (tygIndex * wcVal).toFixed(2);
+      } else {
+        dispTygWc.textContent = '--';
+      }
+    }
+
+    function loadSampleNormal() {
+      inpTg.value = '85';
+      selTgUnit.value = 'mg/dL';
+      inpFbg.value = '82';
+      selFbgUnit.value = 'mg/dL';
+      inpBmi.value = '21.8';
+      inpWc.value = '76';
+      calculateTyG();
+      showToast('✨ Loaded healthy metabolic baseline sample');
+    }
+
+    function loadSampleHighRisk() {
+      inpTg.value = '210';
+      selTgUnit.value = 'mg/dL';
+      inpFbg.value = '115';
+      selFbgUnit.value = 'mg/dL';
+      inpBmi.value = '29.5';
+      inpWc.value = '98';
+      calculateTyG();
+      showToast('⚠️ Loaded elevated insulin resistance sample');
+    }
+
+    function copyResultsSummary() {
+      const score = dispTygScore.textContent;
+      const risk = dispRiskBadge.textContent;
+      const tg = `${inpTg.value} ${selTgUnit.value}`;
+      const fbg = `${inpFbg.value} ${selFbgUnit.value}`;
+      const tygBmi = dispTygBmi.textContent;
+      const tygWc = dispTygWc.textContent;
+
+      let summary = `=================================\n`;
+      summary += `   TYG INDEX CLINICAL REPORT     \n`;
+      summary += `=================================\n`;
+      summary += `Date: ${new Date().toLocaleDateString()}\n`;
+      summary += `TyG Index Score:        ${score}\n`;
+      summary += `Risk Classification:    ${risk}\n`;
+      summary += `Fasting Triglycerides:  ${tg}\n`;
+      summary += `Fasting Blood Glucose:  ${fbg}\n`;
+      if (tygBmi !== '--') summary += `TyG-BMI Index:          ${tygBmi}\n`;
+      if (tygWc !== '--')  summary += `TyG-WC Index:           ${tygWc}\n`;
+      summary += `=================================\n`;
+
+      navigator.clipboard.writeText(summary).then(() => {
+        showToast('📋 Copied clinical summary to clipboard!');
+      }).catch(() => {
+        showToast('Summary copied!');
+      });
+    }
+
+    function toggleFaqCard(header) {
+      header.parentElement.classList.toggle('open');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('active');
+      setTimeout(() => {
+        toast.classList.remove('active');
+      }, 3000);
+    }
+
+    // Pre-calculate on load for zero CLS
+    calculateTyG();
+  </script>
+</body>
+</html>
