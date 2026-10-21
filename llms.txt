@@ -1,0 +1,34 @@
+# TyG Index Calculator — Triglyceride-Glucose Insulin Resistance Tool
+
+> A high-performance, client-side clinical health utility for calculating the Triglyceride-Glucose (TyG) Index, TyG-BMI, and TyG-Waist Circumference to evaluate insulin resistance, metabolic syndrome, and cardiovascular disease risk with zero server tracking.
+
+## Project Overview
+
+- **Canonical URL**: https://ahmedelazabdev.github.io/tygindexcalculator/
+- **Author**: Ahmed Elazab
+- **Primary Technology**: Native Client-Side JavaScript, Mathematical Logarithm Modeling, Semantic Accessible CSS
+- **License**: Open Source / Free Health & Medical Utility
+
+## Core Features & Clinical Logic
+
+1. **TyG Index Mathematical Engine**:
+   - Calculates the validated surrogate marker: `TyG = ln[ (Fasting Triglycerides (mg/dL) × Fasting Glucose (mg/dL)) / 2 ]`.
+   - Native biochemical unit conversions: automatically converts `mmol/L` to `mg/dL` using molecular weights (TG × 88.57, Glucose × 18.0182).
+
+2. **Derived Anthropometric Biomarkers**:
+   - Computes **TyG-BMI** (`TyG × BMI`) and **TyG-WC** (`TyG × Waist Circumference in cm`) to assess central adiposity and hepatic steatosis risk (MASLD / NAFLD).
+
+3. **Evidence-Based Risk Stratification**:
+   - Evaluates scores against clinical literature thresholds:
+     - `< 8.00`: Optimal Insulin Sensitivity (Low Risk).
+     - `8.00 – 8.49`: Borderline / Moderate Risk.
+     - `≥ 8.50`: Significant Insulin Resistance / Elevated Cardiometabolic Risk.
+
+4. **100% Client-Side Privacy**:
+   - All calculations run locally in browser memory. No patient numbers, blood results, or health metrics are ever uploaded, logged, or transmitted across external networks.
+
+## Technical Specifications & Performance
+
+- **Performance**: 100% Lighthouse score, zero external Google Fonts (using native system font stack), zero Cumulative Layout Shift (CLS = 0.000).
+- **Accessibility & Contrast**: Full WCAG AAA color contrast compliance, sequentially descending heading hierarchy (`h1` → `h2` → `h3`), and accessible form labels.
+- **Reporting**: One-click clipboard export and dedicated `@media print` clean medical transcript formatting.
